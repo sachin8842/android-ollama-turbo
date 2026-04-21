@@ -1,0 +1,26 @@
+# Model files (too large for git)
+*.gguf
+Modelfile
+
+# System files
+.DS_Store
+.bashrc
+.bash_history
+*.swp
+*.swo
+*~
+
+# Ollama cache
+.ollama/
+ollama_data/
+
+# Node/Python
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
