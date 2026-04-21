@@ -112,7 +112,7 @@ To run the AI, you must use **Two Sessions** (Two Tabs) in Termux.
 ## 📜 License
 
 This project is licensed under the **MIT License** - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
-
+ U can do anything u want with this repo fork sell modify or anything just give me very little credit 😊🌻 cuz i am new here💗. 
 -----
 
 ### 💡 Pro-Tip for Galaxy A21s Users:
