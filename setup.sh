@@ -1,38 +1,26 @@
 #!/bin/bash
 
-# Android Ollama Turbo - Setup Script
-# Installs Ollama and creates convenient shortcuts
+echo "🚀 Starting AI Auto-Setup..."
 
-set -e
+# 1. Update and Install dependencies
+pkg update && pkg upgrade -y
+pkg install ollama curl wget git -y
 
-echo "🚀 Android Ollama Turbo - Setup Starting..."
-
-# Install Ollama
-echo "📦 Installing Ollama..."
-curl -fsSL https://ollama.ai/install.sh | sh
-
-# Create shortcuts in .bashrc
-echo "⚙️ Creating shortcuts..."
-
-cat >> ~/.bashrc << 'EOF'
-
-# Ollama Turbo Shortcuts
-alias turboog='ollama serve --host 0.0.0.0:11434'
-alias ogkill='pkill -f "ollama serve"'
+# 2. Configure the Turbo Shortcuts (Aliases)
+# This adds 'turboog' and 'd3' to the Termux system permanently.
+if ! grep -q "turboog" ~/.bashrc; then
+cat << 'EOF' >> ~/.bashrc
+# --- OLLAMA TURBO ENGINE ---
+alias turboog='pkill -9 ollama; sleep 1; termux-wake-lock; export OLLAMA_FLASH_ATTENTION=1; export OLLAMA_KV_CACHE_TYPE=q4_0; export OLLAMA_NUM_PARALLEL=1; export OLLAMA_KEEP_ALIVE=-1; ollama serve'
+alias ogkill='pkill -9 ollama; termux-wake-unlock; echo "RAM Cleared and Engine Offline."'
 alias d3='ollama run d3'
 alias q2='ollama run q2'
-alias p4='ollama run p4'
-
 EOF
+fi
 
-# Install wget if not present
-echo "📥 Ensuring wget is installed..."
-pkg install -y wget
+# 3. Setup Storage Access
+termux-setup-storage
 
-echo "✅ Setup complete!"
-echo ""
-echo "Next steps:"
-echo "1. Run: termux-setup-storage"
-echo "2. Download your model using Part 3 in README"
-echo "3. Start with: turboog (in Tab 1)"
-echo "4. Chat with: d3 (in Tab 2)"
+echo "✅ System Setup Complete!"
+echo "👉 Step 1: Type 'source ~/.bashrc'"
+echo "👉 Step 2: Open a New Session, type 'turboog', then come back here to build your model."
