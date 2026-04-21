@@ -1,24 +1,12 @@
-Just follow the instructions from readme.md file step by step😊🌻 
+# 🚀 Android AI Powerhouse (2026 Edition)
 
-# 🚀 Android AI Powerhouse: The Bulletproof 25 minutes Guide
+The ultimate guide to turning your Android phone into a high-speed AI agent. Optimized for devices with 6GB RAM to run models locally and uncensored.
 
-This repository contains the refined, step-by-step method to turn your Android phone into a high-performance local AI agent. No cloud, no subscriptions, and completely uncensored.
-
-## 📱 System Requirements
-
-  - **App:** [Termux (F-Droid Version)](https://f-droid.org/en/packages/com.termux/) — **Do not use the Play Store version.**
-  - **RAM:** Minimum 4GB (Optimized for 6GB-8GB).
-  - **Storage:** \~10GB of free space for models.
-
------
-
-## 🛠️ Step 1: The Foundation (One-Time Setup)
-
-Open Termux and paste this command to install the core tools and grant storage permissions:
+## 🛠️ Instant Auto-Setup
+Copy and paste this single command into Termux:
 
 ```bash
-pkg update && pkg upgrade -y && pkg install ollama curl wget -y && termux-setup-storage
-```
+curl -O [https://raw.githubusercontent.com/sachin8842/android-ollama-turbo/main/setup.sh](https://raw.githubusercontent.com/sachin8842/android-ollama-turbo/main/setup.sh) && bash setup.sh```
 
 *(When the popup appears, click **Allow**.)*
 
