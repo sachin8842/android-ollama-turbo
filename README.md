@@ -1,5 +1,4 @@
-
------
+Just follow the instructions from readme.md file step by step😊🌻 
 
 # 🚀 Android AI Powerhouse: The Bulletproof Guide
 
