@@ -1,6 +1,6 @@
 Just follow the instructions from readme.md file step by step😊🌻 
 
-# 🚀 Android AI Powerhouse: The Bulletproof Guide
+# 🚀 Android AI Powerhouse: The Bulletproof 25 minutes Guide
 
 This repository contains the refined, step-by-step method to turn your Android phone into a high-performance local AI agent. No cloud, no subscriptions, and completely uncensored.
 
